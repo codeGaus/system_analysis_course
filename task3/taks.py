@@ -68,7 +68,7 @@ def read_file(graph: str):
     """Чтение графа из файла"""
     try:
         df = pd.read_csv(graph)
-        df.index = range(1,len(df)+1)
+        df.index = range(1, len(df)+1)
     except Exception as e:
         print(f'Ошибка при открытии файла: {str(e)}')
         return None
@@ -110,7 +110,7 @@ def system_entropy(lst: list):
 
 
 def main():
-    df = read_file('example.csv')
+    df = read_file('task3/example.csv')
     print('Исходный граф системы:')
     print(df)
     print()
